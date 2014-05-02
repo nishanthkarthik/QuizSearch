@@ -189,19 +189,6 @@
 
 
 
-
-
-
-               Version 1.2.1                             Page 7                  Release Date: 22. Apr. 2014
-
-
-
-
-               Formula Student Electric Rules 2014
-
-
-
-
                2.8.3 Add Item Requests
                                                                                                      th
                AIRs to be considered for the Cost Event 2014 have to be submitted no later than June 6 ,
@@ -497,14 +484,14 @@
                6 registration slots will be available for the FSE 2013 Top6 overall finishers.
 
                Place   Team
-               1       Delft TU
-               2       Zürich ETH
+            1       Delft TU
+            2       Zürich ETH
 
-               3       Karlsruhe KIT
-               4       Zwickau UAS
-               5       Dresden TU
+            3       Karlsruhe KIT
+            4       Zwickau UAS
+            5       Dresden TU
 
-               6       Amberg UAS
+            6       Amberg UAS
 
                3.5.4 Registration Fee
                The registration fee of 750 Euros is for a 20-person team. More team members can be
@@ -1091,75 +1078,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-               Version 1.2.1                            Page 20                  Release Date: 22. Apr. 2014
-
-
-
-
-               Formula Student Electric Rules 2014
-
-
-
-
-
                9   Static Events
 
 
@@ -1343,17 +1261,9 @@
                      2014 Rule S4.16)
                Teams that submit reports later than the specified date will be penalized -10 (ten) points per
                day, up to a maximum penalty of -80 points. Teams that do not submit a Cost Report will
-               receive 0 (zero) points for the Cost & Manufacturing Analysis score. Minimum Event score is
-               0 (zero) points.
+               receive 0 (zero) points for the Cost & Manufacturing Analysis score. Minimum Event score is 0 (zero) points.
 
 
-
-               Version 1.2.1                            Page 23                  Release Date: 22. Apr. 2014
-
-
-
-
-               Formula Student Electric Rules 2014
 
 
 
@@ -1578,8 +1488,7 @@
                currents remain within the maximum values given in the cell data sheet.
 
                EfficiencyFactor min  is fixed at 0.1, which represents the EfficiencyFactor resulting from a
-               maximum Endurance time of 1.333*Tmin and an EnergyUsage of 20.33kWh (equivalent to
-               5.72L petrol), assuming that the minimum usage is 2.75kWh.
+               maximum Endurance time of 1.333*Tmin and an EnergyUsage of 20.33kWh (equivalent to 5.72L petrol), assuming that the minimum usage is 2.75kWh.
 
 
                EfficiencyFactor max  is the maximum EfficiencyFactor reached by any team.
@@ -1640,23 +1549,23 @@
 
                12 Changelog
 
-               V1.2.1:
-               Modified 3.10
+            V1.2.1:
+            Modified 3.10
 
-               V1.2.0:
-               Modified 2.5
-               Modified 3.10
+            V1.2.0:
+            Modified 2.5
+            Modified 3.10
 
-               V1.1.0:
-               3.1:  Added part about “guidelines and clarifications”.
-               Added 4.8
-               Added 7.5
-               Added 7.6
-               Added 12
+            V1.1.0:
+            3.1:  Added part about “guidelines and clarifications”.
+            Added 4.8
+            Added 7.5
+            Added 7.6
+            Added 12
 
 
-               V1.0.0:
-               Initial release
+            V1.0.0:
+            Initial release
 
 
 
