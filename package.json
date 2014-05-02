@@ -4,7 +4,7 @@
   "description": "Allows searching rapidly in quiz files",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-node test"
   },
   "keywords": [
     "elasticsearch"
@@ -12,7 +12,6 @@
   "author": "Magnus Bae",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "elasticsearchclient": "~0.5.3",
     "jasmine-node": "~1.14.3",
     "elasticsearch": "~2.1.4",
     "express": "~4.1.1"
