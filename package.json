@@ -13,6 +13,7 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "elasticsearchclient": "~0.5.3",
-    "jasmine-node": "~1.14.3"
+    "jasmine-node": "~1.14.3",
+    "elasticsearch": "~2.1.4"
   }
 }
