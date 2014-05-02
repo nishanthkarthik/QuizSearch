@@ -1,3 +1,27 @@
+
+
+/*.resultbox{
+    display: inline-block;
+    width: 30%;
+    margin:10px;
+    outline: 1px medium black;
+}
+
+.resultset{
+    padding-top: 20px;
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -63,10 +87,15 @@ body {
     margin-top: 28px;
 }
 
+.container {
+    width: 90% !!important;
+}
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        max-width: 90%;
     }
 
     /* Remove the padding we set earlier */
