@@ -4,7 +4,8 @@ var $search
 var value;
 var $fse, $fsae, $event;
 
-var host = 'http://localhost:8080';
+// var host = 'http://localhost:8080';
+var host = '';
 
 function search(){
 
@@ -44,6 +45,7 @@ function createHTML(data){
              $('<div/>',{
 				class:'result',
 				html:'<strong>' + data[i]._source.part + '</strong><br/>'
+				    + (data[i]._source.article != null ? '<i>' + data[i]._source.article + '</i><br/>' : '')
 					+ data[i]._source.text
 			})	
 		);
@@ -59,7 +61,7 @@ $(function readyFunction () {
 	$fsae = $('#fsae');
 	$event = $('#event');
 
-	$search.keydown(function(){
+	$search.keyup(function(){
 		value = encodeURIComponent($(this).val());
 
 		$('.resultset').empty();

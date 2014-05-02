@@ -3,7 +3,7 @@
 var elasticsearch = require('elasticsearch');
 var client = new elasticsearch.Client({
   host: 'localhost:9200',
-  log: 'trace',
+  // log: 'trace',
   apiVersion: '1.1'
 });
 
@@ -39,7 +39,7 @@ var cors = require('cors');
 app.use(cors());
 
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/web/dist'));
 
 
 app.get('/search/:query', function(req, res){
@@ -69,6 +69,8 @@ app.get('/search/:query', function(req, res){
 
 app.get('/fse/:query', function(req, res){
 	console.log(req.params.query);
+	var query = decodeURIComponent(req.params.query)
+	console.log(query);
 	client.search({
 		index:'fse',
 		type:'paragraphs',
@@ -78,7 +80,7 @@ app.get('/fse/:query', function(req, res){
 					should:[{
 						query_string:{
 							default_field:'paragraphs.text',
-							query:req.params.query
+							'query':query
 						}
 					}]
 				}
