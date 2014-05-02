@@ -68,69 +68,34 @@ app.get('/search/:query', function(req, res){
 
 
 app.get('/fse/:query', function(req, res){
-	console.log(req.params.query);
-	var query = decodeURIComponent(req.params.query)
-	console.log(query);
-	client.search({
-		index:'fse',
-		type:'paragraphs',
-		body: {
-			query :{
-				bool:{
-					should:[{
-						query_string:{
-							default_field:'paragraphs.text',
-							'query':query
-						}
-					}]
-				}
-			}
-		}
-	}).then(function(resp){
-		res.json(resp.hits.hits);
-	}, function(err){
-		console.trace(err.message);
-	});
+	search(req, res, 'fse');
 });
 
 app.get('/fsae/:query', function(req, res){
-	console.log(req.params.query);
-	client.search({
-		index:'fsae',
-		type:'paragraphs',
-		body: {
-			query :{
-				bool:{
-					should:[{
-						query_string:{
-							default_field:'paragraphs.text',
-							query:req.params.query
-						}
-					}]
-				}
-			}
-		}
-	}).then(function(resp){
-		res.json(resp.hits.hits);
-	}, function(err){
-		console.trace(err.message);
-	});
+	search(req, res, 'fsae');
 });
 
 app.get('/event/:query', function(req, res){
-	console.log(req.params.query);
+	search(req, res, 'event');
+});
+
+
+function search(req, res, index){
 	client.search({
-		index:'event',
+		index:index,
 		type:'paragraphs',
 		body: {
 			query :{
-				bool:{
-					should:[{
-						query_string:{
-							default_field:'paragraphs.text',
-							query:req.params.query
-						}
-					}]
+				// bool:{
+				// 	should:[{
+				// 		query_string:{
+				// 			default_field:'paragraphs.text',
+				// 			query:req.params.query
+				// 		}
+				// 	}]
+				// }
+				match:{
+					text: req.params.query
 				}
 			}
 		}
@@ -139,8 +104,7 @@ app.get('/event/:query', function(req, res){
 	}, function(err){
 		console.trace(err.message);
 	});
-});
-
+}
 
 
 app.listen('8080', function(){
