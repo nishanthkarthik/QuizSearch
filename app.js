@@ -9,11 +9,13 @@ var client = new elasticsearch.Client({
 
 var fsaeParser = require('./lib/fsae-parser');
 var fseParser = require('./lib/fse-parser');
+var eventParser = require('./lib/event-parser');
 
 
 
 fsaeParser.parseRules();
 fseParser.parseRules();
+eventParser.parseRules();
 
 
 client.ping({
@@ -46,15 +48,31 @@ var inserted = 0;
 // 	});
 // }
 
-for(var i = 0; i < fseParser.paragraphs.length; i++){
+// for(var i = 0; i < fseParser.paragraphs.length; i++){
+// 	client.create({
+// 		index:'fse',
+// 		type:'paragraphs',
+// 		body:fseParser.paragraphs[i]
+// 	}, function(error, response){
+// 		if(error){
+// 			console.log('An error occurred inserting ' 
+// 			            + fseParser.paragraphs[i] 
+// 			            + '. Error: ' + error);
+// 		}else{
+// 			console.log(++inserted + ' documents inserted');
+// 		}
+// 	});
+// }
+
+for(var i = 0; i < eventParser.paragraphs.length; i++){
 	client.create({
-		index:'fse',
+		index:'event',
 		type:'paragraphs',
-		body:fseParser.paragraphs[i]
+		body:eventParser.paragraphs[i]
 	}, function(error, response){
 		if(error){
 			console.log('An error occurred inserting ' 
-			            + fseParser.paragraphs[i] 
+			            + eventParser.paragraphs[i] 
 			            + '. Error: ' + error);
 		}else{
 			console.log(++inserted + ' documents inserted');
