@@ -20,7 +20,7 @@ the best results from each set in the column for that set.
 Building web client
 -----------
 * Built with Yeoman.io, uses ```grunt build``` to create distribution version (minmized etc), ```grunt serve``` to host continous development build with debuggable js.
-* Make sure that ```var host = ``` your node server when using grunt serve, serve does not know what to do with json-requests.
+* If you change port of localhost application and intend to test frontend using ```grunt serve```, change the configuration of findHost() in app/scripts/main.js
 * Change it back before building.
 
 Working with node
