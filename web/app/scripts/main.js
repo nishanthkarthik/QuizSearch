@@ -4,8 +4,15 @@ var $search
 var value;
 var $fse, $fsae, $event;
 
-// var host = 'http://localhost:8080';
-var host = '';
+
+//Uses whichever host is used, unless running on port 9000, then assumes service hosted at localhost:8080
+var host = function findHost(){
+      var host = window.document.location.host;
+      if(host.indexOf(':9000') !== -1){
+        host = 'localhost:8080';
+      }
+      return host;
+    }();
 
 function search(){
 
