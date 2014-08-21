@@ -36,3 +36,7 @@ Requirements
 * Node.js built with v. 0.10.22
 * npm (node package manager)
 * Windows (if you want to extract text from PDFs with A-PDF Extractor ([Link to webpage](http://www.a-pdf.com/text/index.htm)))
+
+Future work
+----------
+It would be very interesting to create a system to easily scrape the PDF-files. Apache PDFBox seems very interesting: https://pdfbox.apache.org/, but requires the development of a java component. This can perfectly be invoked from node, or the node backend can be scrapped for a Java backend using Jetty. Using another tool than Node.js for scraping is highly recommended. 
